@@ -179,10 +179,6 @@ const RequestInfo = () => {
             </div>
           </div>
           <div className="form-col">
-            <div
-              className="g-recaptcha"
-              data-sitekey="6LfzqJ0pAAAAABMMMHMV_ydwe--O926U3SSGQsLk"
-            ></div>
             <button type="submit" className="btn__primary">
               Gửi
             </button>

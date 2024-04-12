@@ -166,10 +166,10 @@ export default function Booking() {
 
   useEffect(() => {
     // Thêm script Google reCAPTCHA
-    const script = document.createElement("script");
-    script.src = "https://www.google.com/recaptcha/api.js";
-    script.async = true;
-    document.body.appendChild(script);
+    // const script = document.createElement("script");
+    // script.src = "https://www.google.com/recaptcha/api.js";
+    // script.async = true;
+    // document.body.appendChild(script);
 
     // Xử lý successMessage
     if (successMessage) {
@@ -378,10 +378,10 @@ export default function Booking() {
               </div>
             </div>
             <div className="form-col">
-              <div
+              {/* <div
                 className="g-recaptcha"
                 data-sitekey="6LfzqJ0pAAAAABMMMHMV_ydwe--O926U3SSGQsLk"
-              ></div>
+              ></div> */}
               <button type="submit" className="btn__primary btn btn__double">
                 Gửi
               </button>
@@ -523,12 +523,11 @@ const Container = styled.div`
 
   .btn {
     padding: 5px 20px;
-    margin-top: 20px;
     position: relative;
     border: 0;
     transition: 0.5s;
     z-index: 1;
-    min-width: 15rem;
+    min-width: 20rem;
     padding: 1rem 2rem;
     font-size: 0.875rem;
     line-height: 1;

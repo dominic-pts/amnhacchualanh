@@ -62,7 +62,6 @@ body {
     border        : 0;
     cursor        : pointer;
     letter-spacing: 0.5px;
-    margin-top    : 20px;
     text-wrap     : nowrap;
   }
 }
