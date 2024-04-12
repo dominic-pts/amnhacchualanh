@@ -54,11 +54,11 @@ const RequestInfo = () => {
 
     const validationErrors = {};
     // Check that the capture fields are not empty
-    for (const key in formData) {
-      if (!formData[key]) {
-        validationErrors[key] = "This field is required";
-      }
-    }
+    // for (const key in formData) {
+    //   if (!formData[key]) {
+    //     validationErrors[key] = "This field is required";
+    //   }
+    // }
 
     // Check email format
     const emailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
