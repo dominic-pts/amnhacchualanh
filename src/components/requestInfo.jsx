@@ -45,12 +45,12 @@ const RequestInfo = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    const captchaResponse = window.grecaptcha.getResponse();
-    if (!captchaResponse.length > 0) {
-      alert("Please complete the reCAPTCHA");
-      return;
-    }
+    // e.preventDefault();
+    // const captchaResponse = window.grecaptcha.getResponse();
+    // if (!captchaResponse.length > 0) {
+    //   alert("Please complete the reCAPTCHA");
+    //   return;
+    // }
 
     const validationErrors = {};
     // Check that the capture fields are not empty
@@ -218,6 +218,7 @@ const Container = styled.div`
       .form-col {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         gap: 40px;
 
         .form-control-wrap {
