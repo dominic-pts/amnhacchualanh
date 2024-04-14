@@ -25,7 +25,7 @@ const Header = () => {
             <Link to="/" rel="item" className="header__navbar--current">
               Trang chủ
             </Link>
-            <Link to="/" rel="item" className="header__navbar--current">
+            <Link to="/cafe-location" rel="item" className="header__navbar--current">
               Địa điểm cafe chữa lành
             </Link>
             <Link to="/booking" rel="item" className="header__navbar--current">

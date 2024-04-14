@@ -235,7 +235,7 @@ const Container = styled.div`
             color: var(--grey-color);
             font-weight: 300;
             text-align: left;
-            padding-left: 50px;
+            padding-left: 20px;
             line-height: 31px;
             text-align: justify;
 

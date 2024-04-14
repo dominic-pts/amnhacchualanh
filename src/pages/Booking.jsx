@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import FormRequestAPI from "../services/formRequest/formRequestAPI";
-import Header from "./Header";
+import Header from "../components/Header";
 
 export default function Booking() {
   const price = 4500;
@@ -397,6 +397,9 @@ export default function Booking() {
 }
 
 const Container = styled.div`
+  .header__navbar--current {
+    color: #494949 !important;
+  }
   --color-primary: #186ab4;
   color: #ffffff;
   background-color: #f0f0f0;
@@ -631,10 +634,9 @@ const Container = styled.div`
             color: var(--color-primary);
           }
         }
-        .Agree{
-          label{
+        .Agree {
+          label {
             span {
-
             }
           }
         }
