@@ -97,11 +97,11 @@ export default function Booking() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const captchaResponse = window.grecaptcha.getResponse();
-    if (!captchaResponse.length > 0) {
-      alert("Please complete the reCAPTCHA");
-      return;
-    }
+    // const captchaResponse = window.grecaptcha.getResponse();
+    // if (!captchaResponse.length > 0) {
+    //   alert("Please complete the reCAPTCHA");
+    //   return;
+    // }
     const checkbox = document.getElementById("checkbox");
     if (!checkbox.checked) {
       alert("Vui lòng đọc điều khoản và chính sách trước khi gửi");
