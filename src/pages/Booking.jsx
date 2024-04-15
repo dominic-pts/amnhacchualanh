@@ -21,6 +21,7 @@ export default function Booking() {
     totalPayment: "",
     seats: "",
     agree: true,
+    note: ""
   });
 
   const handleSeatClick = (rowIndex, seatIndex) => {
@@ -160,6 +161,7 @@ export default function Booking() {
         name: "",
         email: "",
         phone: "",
+        note:""
       });
     }, 1000);
   };
@@ -345,6 +347,7 @@ export default function Booking() {
                   className="form-control"
                   readOnly
                 />
+               
               </div>
             </div>
             <div className="form-col">
@@ -382,6 +385,16 @@ export default function Booking() {
                 className="g-recaptcha"
                 data-sitekey="6LfzqJ0pAAAAABMMMHMV_ydwe--O926U3SSGQsLk"
               ></div> */}
+               <textarea
+                  id="note"
+                  type="description"
+                  name="note"
+                  placeholder="Ghi chú"
+                  maxLength="500"
+                  value={formData.note}
+                  className="form-control"
+                  onChange={handleChange}
+                />
               <button type="submit" className="btn__primary btn btn__double">
                 Gửi
               </button>
