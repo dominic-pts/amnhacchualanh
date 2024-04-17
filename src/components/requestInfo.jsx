@@ -265,4 +265,20 @@ const Container = styled.div`
     resize: none;
     font-size: 18px;
   }
+    //reponsive
+    @media (max-width: 430px){
+      h1{
+        font-size: 25px;
+      }
+      .request-info-input .form{
+        grid-template-columns: 1fr;
+        gap: 15px;
+        .form-col{
+          gap: 15px;
+          .btn__primary{
+            margin: 0 auto;
+          }
+        }
+      }
+    }
 `;

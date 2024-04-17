@@ -68,5 +68,12 @@ const Container = styled.div`
     }
   }
 
- 
+ //reponsive
+
+  @media (max-width: 1024px) {
+    .content{
+        grid-template-columns: 1fr ;
+        gap: 30px;
+      }
+  }
 `;

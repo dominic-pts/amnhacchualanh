@@ -25,12 +25,10 @@ export default function CustomCarousel() {
     <Container>
       <BootstrapCarousel keyboard={true} touch={true}>
         {sliderHeader.map((item, index) => (
-          <BootstrapCarousel.Item key={index} interval={7000} >
+          <BootstrapCarousel.Item key={index} interval={7000}>
             <img
               className="img_carousel"
-              src={
-                item.attributes.image.data[0].attributes.url
-              }
+              src={item.attributes.image.data[0].attributes.url}
               alt={item.attributes.Title}
             />
             <BootstrapCarousel.Caption>
@@ -45,6 +43,9 @@ export default function CustomCarousel() {
 }
 
 const Container = styled.div`
+  img {
+    object-fit: cover;
+  }
   .img_carousel {
     width: 100%;
     height: 100vh;

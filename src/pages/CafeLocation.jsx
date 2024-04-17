@@ -66,7 +66,8 @@ export default function CafeLocation() {
                   {item.attributes.close}
                 </span>
                 <span>
-                  Tầm giá khoảng: {parseFloat(item.attributes.price).toLocaleString()} VNĐ
+                  Tầm giá khoảng:{" "}
+                  {parseFloat(item.attributes.price).toLocaleString()} VNĐ
                 </span>
                 <span>Địa điểm: {item.attributes.address}</span>
               </div>
@@ -93,19 +94,20 @@ export default function CafeLocation() {
                     }
                     alt=""
                   />
-                    <span>
-                  Thời gian: Mở {selectedLocationItem?.attributes.open} - Đóng
-                  {selectedLocationItem?.attributes.close}
-                </span>
-                <span>
-                  Tầm giá khoảng: {parseFloat(
-                    selectedLocationItem?.attributes.price
-                  ).toLocaleString()}
-                  VNĐ
-                </span>
-                <span>
-                  Địa điểm: {selectedLocationItem?.attributes.address}
-                </span>
+                  <span>
+                    Thời gian: Mở {selectedLocationItem?.attributes.open} - Đóng
+                    {selectedLocationItem?.attributes.close}
+                  </span>
+                  <span>
+                    Tầm giá khoảng:{" "}
+                    {parseFloat(
+                      selectedLocationItem?.attributes.price
+                    ).toLocaleString()}
+                    VNĐ
+                  </span>
+                  <span>
+                    Địa điểm: {selectedLocationItem?.attributes.address}
+                  </span>
                 </div>
                 <div className="modal__body__content">
                   <h4>{selectedLocationItem?.attributes.title}</h4>
@@ -185,7 +187,7 @@ const Container = styled.div`
           -webkit-line-clamp: 4; /* Hiển thị chỉ 2 dòng */
           -webkit-box-orient: vertical;
         }
-        span{
+        span {
           overflow: hidden;
           text-overflow: ellipsis; /* Để hiển thị dấu ... khi nội dung quá dài */
           display: -webkit-box;
@@ -246,7 +248,7 @@ const Container = styled.div`
         padding: 40px 0px 30px;
         border-top: 1px solid var(--greyish-color);
         align-items: start;
-        .content_time{
+        .content_time {
           display: flex;
           flex-direction: column;
           gap: 20px;
@@ -257,10 +259,9 @@ const Container = styled.div`
             margin: 0 20px;
             object-fit: contain;
           }
-          span{
+          span {
             padding-left: 20px;
           }
-
         }
 
         &__content {
@@ -321,6 +322,27 @@ const Container = styled.div`
 
     100% {
       opacity: 1;
+    }
+  }
+  .hamburger-react {
+    color: var(--text-title-color) !important;
+  }
+  //reponsive
+  @media (max-width: 430px) {
+    h1{
+      margin-bottom: 20px;
+    }
+    .des{
+      padding: 50px 10px;
+      text-align: justify;
+    }
+    .box_heal{
+      grid-template-columns: 1fr !important;
+    }
+  }
+  @media (max-width: 1024px) {
+    .box_heal{
+      grid-template-columns: 1fr 1fr;
     }
   }
 `;

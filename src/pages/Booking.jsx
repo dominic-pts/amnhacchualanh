@@ -21,7 +21,7 @@ export default function Booking() {
     totalPayment: "",
     seats: "",
     agree: true,
-    note: ""
+    note: "",
   });
 
   const handleSeatClick = (rowIndex, seatIndex) => {
@@ -161,7 +161,7 @@ export default function Booking() {
         name: "",
         email: "",
         phone: "",
-        note:""
+        note: "",
       });
     }, 1000);
   };
@@ -237,7 +237,7 @@ export default function Booking() {
   }, [formRequests]);
 
   return (
-    <Container>
+    <Container className="backlove">
       <Header />
       <div className="booking-container">
         <ul className="showcase">
@@ -347,7 +347,6 @@ export default function Booking() {
                   className="form-control"
                   readOnly
                 />
-               
               </div>
             </div>
             <div className="form-col">
@@ -385,16 +384,16 @@ export default function Booking() {
                 className="g-recaptcha"
                 data-sitekey="6LfzqJ0pAAAAABMMMHMV_ydwe--O926U3SSGQsLk"
               ></div> */}
-               <textarea
-                  id="note"
-                  type="description"
-                  name="note"
-                  placeholder="Ghi chú"
-                  maxLength="500"
-                  value={formData.note}
-                  className="form-control"
-                  onChange={handleChange}
-                />
+              <textarea
+                id="note"
+                type="description"
+                name="note"
+                placeholder="Ghi chú"
+                maxLength="500"
+                value={formData.note}
+                className="form-control"
+                onChange={handleChange}
+              />
               <button type="submit" className="btn__primary btn btn__double">
                 Gửi
               </button>
@@ -410,12 +409,12 @@ export default function Booking() {
 }
 
 const Container = styled.div`
-  .header__navbar--current {
-    color: #494949 !important;
-  }
   --color-primary: #186ab4;
   color: #ffffff;
   background-color: #f0f0f0;
+  .header__navbar--current {
+    color: #494949 !important;
+  }
   .booking-container {
     display: flex;
     flex-direction: column;
@@ -461,7 +460,7 @@ const Container = styled.div`
   }
 
   .seat.sold {
-    background-color: #fff;
+    background-color: #ff0000;
     pointer-events: none;
     cursor: no-drop;
   }
@@ -602,100 +601,117 @@ const Container = styled.div`
       font-weight: var(--font-weight-heading);
       margin: 0 auto;
     }
-  }
+    .request-info-input {
+      margin: 20px 30px;
+      .form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        gap: 60px;
 
-  .request-info-input {
-    margin: 20px 30px;
-    .form {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      text-align: center;
-      gap: 60px;
-
-      .success {
-        text-align: left;
-        color: var(--green-color);
-      }
-
-      .error {
-        color: var(--red-color);
-        padding-top: 5px;
-      }
-
-      .form-col {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-        width: 100%;
-
-        .form-control-wrap {
-          position: relative;
-          display: block;
-        }
-        .Agree,
-        .rules {
+        .success {
           text-align: left;
-          span {
-            font-size: 16px;
-            color: var(--color-primary);
-            padding-left: 10px;
-            cursor: pointer;
-          }
-          a {
-            text-decoration: none;
-            font-size: 16px;
-            color: var(--color-primary);
-          }
+          color: var(--green-color);
         }
-        .Agree {
-          label {
+
+        .error {
+          color: var(--red-color);
+          padding-top: 5px;
+        }
+
+        .form-col {
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+          width: 100%;
+
+          .form-control-wrap {
+            position: relative;
+            display: block;
+          }
+          .Agree,
+          .rules {
+            text-align: left;
             span {
+              font-size: 16px;
+              color: var(--color-primary);
+              padding-left: 10px;
+              cursor: pointer;
+            }
+            a {
+              text-decoration: none;
+              font-size: 16px;
+              color: var(--color-primary);
             }
           }
-        }
-        textarea[type="description"],
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        input[type="text"] {
-          border-radius: 10px;
-          padding: 12px;
-          font-size: 16px;
-          height: auto;
-          text-align: left;
-          font-weight: 200;
-          display: block;
-          line-height: 1.5;
-          color: #495057;
-          background-color: var(--white-color);
-          background-clip: padding-box;
-          border: 1px solid var(--grey-color);
-          width: -webkit-fill-available;
-          outline: none;
-          transition: border-color 0.15s ease-in-out,
-            box-shadow 0.15s ease-in-out;
+          .Agree {
+            label {
+              span {
+              }
+            }
+          }
+          textarea[type="description"],
+          input[type="text"],
+          input[type="email"],
+          input[type="tel"],
+          input[type="text"] {
+            border-radius: 10px;
+            padding: 12px;
+            font-size: 16px;
+            height: auto;
+            text-align: left;
+            font-weight: 200;
+            display: block;
+            line-height: 1.5;
+            color: #495057;
+            background-color: var(--white-color);
+            background-clip: padding-box;
+            border: 1px solid var(--grey-color);
+            width: -webkit-fill-available;
+            outline: none;
+            transition: border-color 0.15s ease-in-out,
+              box-shadow 0.15s ease-in-out;
 
-          &:focus {
-            border: 1px solid var(--primary-color);
+            &:focus {
+              border: 1px solid var(--primary-color);
+            }
+          }
+
+          .form-message-2 {
+            height: 100%;
+            display: flex;
+          }
+
+          .form-message {
+            display: block;
+            height: 80% !important;
+            padding: 12px 15px !important;
+            resize: none;
           }
         }
 
-        .form-message-2 {
-          height: 100%;
-          display: flex;
-        }
-
-        .form-message {
-          display: block;
-          height: 80% !important;
-          padding: 12px 15px !important;
-          resize: none;
+        .btn__primary {
+          max-width: 200px !important;
         }
       }
+    }
 
-      .btn__primary {
-        max-width: 200px !important;
+    //reponsive
+    @media (max-width: 430px) {
+    .form {
+      grid-template-columns: 1fr !important;
+      gap: 15px !important;
+      .form-col {
+        gap: 15px;
       }
+    }
+  }
+  @media (max-width: 1024px) {
+    /* .containers {
+      max-width: 120vw !important;
+    } */
+    .row {
+      flex-wrap: nowrap;
     }
   }
 `;

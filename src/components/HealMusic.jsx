@@ -264,4 +264,17 @@ const Container = styled.div`
       opacity: 1;
     }
   }
+
+  //reponsive
+  @media (max-width: 430px){
+    .box_heal{
+     grid-template-columns: 1fr !important;
+    }
+    
+  }
+  @media (max-width: 1024px) {
+    .box_heal{
+     grid-template-columns: 1fr 1fr;
+    }
+  }
 `;

@@ -64,6 +64,25 @@ body {
     letter-spacing: 0.5px;
     text-wrap     : nowrap;
   }
+  @media (max-width: 1024px) {
+    .containers {
+      max-width: 90vw;
+    }
+  }
+  @media (min-width: 1024px) and (max-width: 1300px) {
+    .containers {
+      max-width: 85vw;
+      
+    }
+    
+  }
+  
+  @media (min-width: 1301px) {
+    .containers {
+      max-width: 73vw;
+    }
+  }
+  
 }
 
 .hidden-y {

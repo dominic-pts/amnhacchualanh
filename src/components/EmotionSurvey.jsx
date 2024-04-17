@@ -182,4 +182,20 @@ const Container = styled.div`
   .radio-container input[type="radio"]:checked {
     background-color: var(--primary-color); /* Màu nền khi được chọn */
   }
+
+  //reponsive
+  @media (max-width: 430px){
+    h1{
+      font-size:21px;
+    }
+    p{
+      padding: 0 10px 10px;
+    }
+    form{
+      grid-template-columns: 1fr;
+      div{
+        padding: 10px;
+      }
+    }
+  }
 `;

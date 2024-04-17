@@ -119,4 +119,14 @@ const Container = styled.div`
       }
     }
   }
+  //reponsive
+  @media (max-width: 430px) {
+    .footer {
+      flex-direction: column;
+      gap: 50px;
+      .logoMedia img {
+        width: 223px;
+      }
+    }
+  }
 `;
