@@ -166,23 +166,21 @@ const Container = styled.div`
     }
     .header {
       padding: 15px 15px 10px !important;
-      &__navbar {
+      /* &__navbar {
         display: none !important;
-      }
+      } */
     }
     .container {
       max-width: 355px;
-    }
-    .booking__item{
-      display: none;
     }
   }
   @media (max-width: 1024px) {
     .header__navbar {
       display: none !important;
     }
+    
   }
-  @media (min-width: 991px) {
+  @media (min-width: 1025px) {
     .header__menu {
       display: none !important;
     }

@@ -220,10 +220,10 @@ const Container = styled.div`
       display: flex;
       flex-direction: column;
       background-color: #fff;
-      width: 1100px;
+      width: 90vw;
       z-index: 101;
       animation: showTop 0.2s linear;
-      height: 600px;
+      height: 90vh;
 
       .modal-header {
         display: flex;
@@ -329,20 +329,39 @@ const Container = styled.div`
   }
   //reponsive
   @media (max-width: 430px) {
-    h1{
+    h1 {
       margin-bottom: 20px;
     }
-    .des{
+    .des {
       padding: 50px 10px;
       text-align: justify;
     }
-    .box_heal{
+    .box_heal {
       grid-template-columns: 1fr !important;
     }
   }
   @media (max-width: 1024px) {
-    .box_heal{
+    .box_heal {
       grid-template-columns: 1fr 1fr;
     }
-  }
+    .modal {
+      &__body {
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+    }
+    #modal .modal .modal__body__content {
+      padding-top: 30px;
+      p {
+        padding-left: 20px;
+      }
+    }
+    .content_time{
+      align-items: center;
+    }
+     #modal .modal .modal__body__content h5{
+      margin: 0 0 30px 10px;
+    }
+    }
 `;

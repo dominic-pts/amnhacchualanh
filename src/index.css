@@ -64,29 +64,91 @@ body {
     letter-spacing: 0.5px;
     text-wrap     : nowrap;
   }
+
+  @media (max-width: 550px) {
+    .request-info-content {
+      height    : auto !important;
+      margin-top: 100px;
+    }
+
+    .form {
+      grid-template-columns: 1fr !important;
+      gap                  : 20px !important;
+    }
+
+    .seat {
+      height: 25px !important;
+      width : 30px !important;
+      margin: 5px !important;
+
+    }
+
+    .form-col {
+      gap: 20px !important;
+    }
+
+    .payment {
+      margin-top: 50px;
+    }
+
+    .backlove {
+      width           : 100vw;
+      align-items     : center;
+      justify-content : center;
+      display         : flex;
+      flex-direction  : column;
+      background-color: #f0f0f0;
+      overflow        : hidden;
+    }
+
+    .seat:nth-of-type(2) {
+      margin-right: 10px !important;
+    }
+
+    .seat:nth-last-of-type(2) {
+      margin-left: 10px !important;
+    }
+  }
+
   @media (max-width: 1024px) {
     .containers {
       max-width: 90vw;
     }
+
+    .booking-container {
+      height     : auto !important;
+      padding-top: 100px;
+    }
+
+    .seat {
+      height: 35px;
+      width : 40px;
+    }
+
+    .row {
+      flex-wrap: nowrap;
+    }
   }
+
   @media (min-width: 1024px) and (max-width: 1300px) {
     .containers {
       max-width: 85vw;
-      
+
     }
-    
+
+
   }
-  
+
   @media (min-width: 1301px) {
     .containers {
-      max-width: 73vw;
+      max-width: 95vw;
     }
   }
-  
+
 }
 
 .hidden-y {
-  overflow-y: hidden !important;
+  overflow-y   : hidden !important;
   padding-right: 17px;
 }
 

@@ -78,7 +78,12 @@ export default function HealMusic() {
               <div className="modal__body__content">
                 <h4>{selectedHealItem?.attributes.title}</h4>
                 <h5>
-                <Link to={`${selectedHealItem?.attributes.link_heal}`} target="_blank">Chi tiết hơn</Link>
+                  <Link
+                    to={`${selectedHealItem?.attributes.link_heal}`}
+                    target="_blank"
+                  >
+                    Chi tiết hơn
+                  </Link>
                 </h5>
                 <p>{selectedHealItem?.attributes.description}</p>
               </div>
@@ -107,9 +112,9 @@ const Container = styled.div`
       border-radius: 20px;
       &:hover {
         img {
-        transform: scale(1.05);
-        border: var(--primary-color) solid 1px;
-      }
+          transform: scale(1.05);
+          border: var(--primary-color) solid 1px;
+        }
       }
       img {
         border-radius: 20px;
@@ -138,7 +143,7 @@ const Container = styled.div`
           -webkit-line-clamp: 2; /* Hiển thị chỉ 2 dòng */
           -webkit-box-orient: vertical;
         }
-        span{
+        span {
           display: none;
         }
       }
@@ -167,16 +172,16 @@ const Container = styled.div`
       display: flex;
       flex-direction: column;
       background-color: #fff;
-      width: 1100px;
+      width: 85vw;
       z-index: 101;
       animation: showTop 0.2s linear;
-      height: 600px;
+      height: 90vh;
 
       .modal-header {
         display: flex;
         flex-direction: row;
         justify-content: end;
-        padding: 0 ;
+        padding: 0;
         img {
           background-color: var(--text-title-color);
           border-radius: 20%;
@@ -214,7 +219,7 @@ const Container = styled.div`
             margin: 0 0 10px 0;
             list-style: 26.4px;
           }
-          
+
           h5 {
             margin-top: 0;
             padding-bottom: 10px;
@@ -223,12 +228,11 @@ const Container = styled.div`
             margin-left: 180px;
             margin-right: 180px;
             line-height: 31px;
-            a{
-            text-decoration: none;
-            font-size: 18px;
-            color: var(--primary-color);
-        
-          }
+            a {
+              text-decoration: none;
+              font-size: 18px;
+              color: var(--primary-color);
+            }
           }
 
           p {
@@ -238,7 +242,6 @@ const Container = styled.div`
             padding-left: 20px;
             line-height: 31px;
             text-align: justify;
-
           }
         }
       }
@@ -266,15 +269,43 @@ const Container = styled.div`
   }
 
   //reponsive
-  @media (max-width: 430px){
-    .box_heal{
-     grid-template-columns: 1fr !important;
+  @media (max-width: 430px) {
+    .box_heal {
+      grid-template-columns: 1fr !important;
     }
-    
+     #modal .modal .modal__body img {
+      width: 250px;
+    }
+    #modal .modal .modal__body__content p {
+      padding-right: 80px;
+
+      margin-left: 80px;
+    }
+    #modal .modal .modal__body__content h4 {
+      font-size: 12px;
+      font-weight: 500;
+      padding-top: 30px;
+    }
+    #modal .modal .modal__body__content h5 {
+      text-wrap: nowrap;
+      a {
+        font-size: 12px;
+      }
+    }
   }
   @media (max-width: 1024px) {
-    .box_heal{
-     grid-template-columns: 1fr 1fr;
+    .box_heal {
+      grid-template-columns: 1fr 1fr;
+    }
+    .modal {
+      &__body {
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+    }
+    #modal .modal .modal__body__content p {
+      padding-left: 0;
     }
   }
 `;

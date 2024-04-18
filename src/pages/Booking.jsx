@@ -411,8 +411,7 @@ export default function Booking() {
 const Container = styled.div`
   --color-primary: #186ab4;
   color: #ffffff;
-  background-color: #f0f0f0;
-  .header__navbar--current {
+  .hamburger-react {
     color: #494949 !important;
   }
   .booking-container {
@@ -696,8 +695,8 @@ const Container = styled.div`
       }
     }
 
-    //reponsive
-    @media (max-width: 430px) {
+  //reponsive
+  @media (max-width: 430px) {
     .form {
       grid-template-columns: 1fr !important;
       gap: 15px !important;
@@ -707,11 +706,17 @@ const Container = styled.div`
     }
   }
   @media (max-width: 1024px) {
-    /* .containers {
-      max-width: 120vw !important;
-    } */
+    .booking-container{
+      height: max-content !important;
+      padding-top: 100px;
+    }
+    .seat {
+      height: 35px !important;
+      width: 40px !important;
+    }
     .row {
       flex-wrap: nowrap;
     }
   }
+}
 `;
