@@ -77,7 +77,7 @@ const RequestInfo = () => {
       return;
     }
 
-    fetch("http://localhost:1337/api/form-request-infos", {
+    fetch("https://strapirender-production.up.railway.app/api/form-request-infos", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

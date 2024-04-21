@@ -138,7 +138,7 @@ export default function Booking() {
       return;
     }
 
-    fetch("http://localhost:1337/api/form-requests", {
+    fetch("https://strapirender-production.up.railway.app/api/form-requests", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
