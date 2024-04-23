@@ -7,15 +7,20 @@ import { CAccordion } from "@coreui/react";
 import { CAccordionBody } from "@coreui/react";
 import { CAccordionHeader } from "@coreui/react";
 import { CAccordionItem } from "@coreui/react";
+import { useLocation } from "react-router-dom";
 
 export default function TermsPolicies() {
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const number = parseInt(queryParams.get("number"), 10);
+
   return (
     <Container>
       <Header />
       <Floating />
       <div className="containers ruler">
         <h1>ĐIỀU KHOẢN VÀ CHÍNH SÁCH</h1>
-        <CAccordion activeItemKey={2}>
+        <CAccordion activeItemKey={number}>
           <CAccordionItem itemKey={1}>
             <CAccordionHeader>
               Chính sách đặt chỗ và thanh toán
