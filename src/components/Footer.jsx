@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="footer">
           <div className="about">
             <ul>
-              <li>Tên cơ sở: Âm nhạc chữa lành </li>
+              <li>Công ty Cổ Phần Âm nhạc chữa lành </li>
               <li>Địa chỉ: 1 Nguyễn Văn Trỗi, P2, Đà Lạt, Lâm Đồng </li>
               <li>
                 Số điện thoại: <Link to="/">0987654321</Link>{" "}
@@ -48,16 +48,24 @@ export default function Footer() {
             <h5>Điều khoản và chính sách</h5>
             <ul>
               <li>
-                <Link to="/">Chính sách đặt chỗ và thanh toán</Link>
+                <Link to="/terms-policies">
+                  Chính sách đặt chỗ và thanh toán
+                </Link>
               </li>
               <li>
-                <Link to="/">Chính sách sử lý kiếu nại</Link>
+                <Link to="/terms-policies">Chính sách sử lý kiếu nại</Link>
               </li>
               <li>
-                <Link to="/">Chính sách hủy</Link>
+                <Link to="/terms-policies">Chính sách hủy</Link>
               </li>
               <li>
-                <Link to="/">Chính sách bảo mật</Link>
+                <Link to="/terms-policies">Chính sách bảo lưu</Link>
+              </li>
+              <li>
+                <Link to="/terms-policies">Chính sách tạm ngừng biểu diễn</Link>
+              </li>
+              <li>
+                <Link to="/terms-policies">Chính sách bảo mật</Link>
               </li>
             </ul>
           </div>
@@ -68,7 +76,7 @@ export default function Footer() {
 }
 
 const Container = styled.div`
-  background-color: #f0f0f0;
+  background-color: #f0f0f0 !important;
   width: 100%;
   height: max-content;
   bottom: 0;
@@ -128,5 +136,6 @@ const Container = styled.div`
         width: 223px;
       }
     }
+    
   }
 `;

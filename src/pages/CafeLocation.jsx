@@ -5,6 +5,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import iconCancel from "../assets/icon/cancel.svg";
 import CafeLocationAPI from "../services/cafeLocation/cafeLocationAPI";
+import Floating from "../components/Floating";
+
 export default function CafeLocation() {
   const modalRef = useRef();
   const [cafeLocation, setCafeLocation] = useState([]);
@@ -44,6 +46,7 @@ export default function CafeLocation() {
     <>
       <Container className="containers">
         <Header />
+        <Floating/>
         <h1>Các địa điểm âm nhạc Cafe Chữa Lành tại Đà Lạt</h1>
         <p className="des">
           Tại các quán cafe tại Đà Lạt, trải nghiệm chữa lành bằng âm nhạc
@@ -164,6 +167,7 @@ const Container = styled.div`
         border-radius: 20px;
         height: 250px;
         transition: 0.2s linear;
+        object-fit: cover;
       }
       .card_content {
         padding: 15px;
@@ -238,6 +242,7 @@ const Container = styled.div`
           height: 32px;
           margin: 10px;
           cursor: pointer;
+          object-fit: cover;
         }
       }
 
@@ -258,6 +263,7 @@ const Container = styled.div`
             width: 350px;
             margin: 0 20px;
             object-fit: contain;
+            object-fit: cover;
           }
           span {
             padding-left: 20px;
@@ -357,11 +363,11 @@ const Container = styled.div`
         padding-left: 20px;
       }
     }
-    .content_time{
+    .content_time {
       align-items: center;
     }
-     #modal .modal .modal__body__content h5{
+    #modal .modal .modal__body__content h5 {
       margin: 0 0 30px 10px;
     }
-    }
+  }
 `;

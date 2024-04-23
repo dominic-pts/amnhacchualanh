@@ -52,17 +52,26 @@ const Container = styled.div`
   }
   h3 {
     font-size: var(--font-size-big);
-    display: -webkit-box;
+    /* display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
-    overflow: hidden;
+    overflow: hidden; */
   }
   p {
     font-size: var(--font-size-medium);
     margin-bottom: 50px;
-    display: -webkit-box;
+    /* display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    overflow: hidden;
+    overflow: hidden; */
+  }
+  //reponsive
+  @media (max-width: 430px){
+    h3 {
+    font-size: var(--font-size-medium);
+  }
+  p{
+    font-size: var(--font-size-normal);
+  }
   }
 `;

@@ -120,6 +120,7 @@ const Container = styled.div`
         border-radius: 20px;
         height: 250px;
         transition: 0.2s linear;
+        object-fit: cover;
       }
       .card_content {
         padding: 15px;
@@ -189,6 +190,7 @@ const Container = styled.div`
           width: 32px;
           height: 32px;
           margin: 10px;
+          object-fit: cover;
           cursor: pointer;
         }
       }
@@ -204,7 +206,7 @@ const Container = styled.div`
           border-radius: 20px;
           width: 350px;
           margin: 0 20px;
-          object-fit: contain;
+          object-fit: cover;
         }
 
         &__content {
@@ -273,7 +275,7 @@ const Container = styled.div`
     .box_heal {
       grid-template-columns: 1fr !important;
     }
-     #modal .modal .modal__body img {
+    #modal .modal .modal__body img {
       width: 250px;
     }
     #modal .modal .modal__body__content p {

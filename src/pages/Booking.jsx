@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import FormRequestAPI from "../services/formRequest/formRequestAPI";
 import Header from "../components/Header";
+import Floating from "../components/Floating";
 
 export default function Booking() {
   const price = 4500;
@@ -239,6 +240,7 @@ export default function Booking() {
   return (
     <Container className="backlove">
       <Header />
+      <Floating/>
       <div className="booking-container">
         <ul className="showcase">
           <li>
