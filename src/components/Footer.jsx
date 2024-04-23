@@ -48,24 +48,24 @@ export default function Footer() {
             <h5>Điều khoản và chính sách</h5>
             <ul>
               <li>
-                <Link to="/terms-policies?number=1">
+                <Link to="/terms-policies?type=dat-cho-thanh-toan">
                   Chính sách đặt chỗ và thanh toán
                 </Link>
               </li>
               <li>
-                <Link to="/terms-policies?number=2">Chính sách sử lý kiếu nại</Link>
+                <Link to="/terms-policies?type=kieu-nai">Chính sách sử lý kiếu nại</Link>
               </li>
               <li>
-                <Link to="/terms-policies?number=3">Chính sách hủy</Link>
+                <Link to="/terms-policies?type=huy">Chính sách hủy</Link>
               </li>
               <li>
-                <Link to="/terms-policies?number=4">Chính sách bảo lưu</Link>
+                <Link to="/terms-policies?type=bao-luu">Chính sách bảo lưu</Link>
               </li>
               <li>
-                <Link to="/terms-policies?number=5">Chính sách tạm ngừng biểu diễn</Link>
+                <Link to="/terms-policies?type=tam-ngung">Chính sách tạm ngừng biểu diễn</Link>
               </li>
               <li>
-                <Link to="/terms-policies?number=6">Chính sách bảo mật</Link>
+                <Link to="/terms-policies?type=bao-mat">Chính sách bảo mật</Link>
               </li>
             </ul>
           </div>

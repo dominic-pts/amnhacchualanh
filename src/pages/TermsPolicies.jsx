@@ -12,7 +12,7 @@ import { useLocation } from "react-router-dom";
 export default function TermsPolicies() {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
-  const number = parseInt(queryParams.get("number"), 10);
+  const type = queryParams.get("type");
 
   return (
     <Container>
@@ -20,8 +20,8 @@ export default function TermsPolicies() {
       <Floating />
       <div className="containers ruler">
         <h1>ĐIỀU KHOẢN VÀ CHÍNH SÁCH</h1>
-        <CAccordion activeItemKey={number}>
-          <CAccordionItem itemKey={1}>
+        <CAccordion activeItemKey={type}>
+          <CAccordionItem itemKey={"dat-cho-thanh-toan"}>
             <CAccordionHeader>
               Chính sách đặt chỗ và thanh toán
             </CAccordionHeader>
@@ -47,7 +47,7 @@ export default function TermsPolicies() {
               </ul>
             </CAccordionBody>
           </CAccordionItem>
-          <CAccordionItem itemKey={2}>
+          <CAccordionItem itemKey={"kieu-nai"}>
             <CAccordionHeader>Chính sách sử lý kiếu nại</CAccordionHeader>
             <CAccordionBody>
               <ul>
@@ -59,7 +59,7 @@ export default function TermsPolicies() {
               </ul>
             </CAccordionBody>
           </CAccordionItem>
-          <CAccordionItem itemKey={3}>
+          <CAccordionItem itemKey={"huy"}>
             <CAccordionHeader>Chính sách hủy</CAccordionHeader>
             <CAccordionBody>
               <ul>
@@ -70,7 +70,7 @@ export default function TermsPolicies() {
               </ul>
             </CAccordionBody>
           </CAccordionItem>
-          <CAccordionItem itemKey={4}>
+          <CAccordionItem itemKey={"bao-luu"}>
             <CAccordionHeader>Chính sách bảo lưu</CAccordionHeader>
             <CAccordionBody>
               <ul>
@@ -87,7 +87,7 @@ export default function TermsPolicies() {
               </ul>
             </CAccordionBody>
           </CAccordionItem>
-          <CAccordionItem itemKey={5}>
+          <CAccordionItem itemKey={"tam-ngung"}>
             <CAccordionHeader>
               Chính sách tạm ngưng biểu diễn do trường hợp bất khả kháng
             </CAccordionHeader>
@@ -117,7 +117,7 @@ export default function TermsPolicies() {
               </ul>
             </CAccordionBody>
           </CAccordionItem>
-          <CAccordionItem itemKey={6}>
+          <CAccordionItem itemKey={"bao-mat"}>
             <CAccordionHeader>Chính sách bảo mât</CAccordionHeader>
             <CAccordionBody>
               <div className="privacy-policy">
