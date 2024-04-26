@@ -1,6 +1,4 @@
 import React, { useState, useRef } from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import styled from "styled-components";
 
 // styles
@@ -91,7 +89,6 @@ export default function Music() {
   };
   return (
     <Container>
-      {/* <Header /> */}
       <div className={`App ${isLibOpen ? "library-active" : ""}`}>
         <Nav isLibOpen={isLibOpen} setIsLibOpen={setIsLibOpen} />
         <Song currentSong={currentSong} />
@@ -125,7 +122,6 @@ export default function Music() {
           onEnded={() => handleChangeSong("next")}
         ></audio>
       </div>
-      {/* <Footer /> */}
     </Container>
   );
 }
