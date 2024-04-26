@@ -4,7 +4,7 @@ import Error from "./pages/Error";
 import Booking from "../src/pages/Booking";
 import CafeLocation from "./pages/CafeLocation";
 import TermsPolicies from "./pages/TermsPolicies";
-
+import Music from "./pages/Music";
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
         <Route exact path="/booking" element={<Booking />} />
         <Route exact path="/terms-policies" element={<TermsPolicies />} />
         <Route exact path="/cafe-location" element={<CafeLocation />} />
+        <Route exact path="/music" element={<Music />} />
         <Route path="*" element={<Error />} />
         
       </Routes>

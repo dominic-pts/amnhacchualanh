@@ -35,7 +35,10 @@ const Header = () => {
               rel="item"
               className="header__navbar--current"
             >
-              Địa điểm cafe chữa lành
+              Địa điểm âm nhac cafe chữa lành
+            </Link>
+            <Link to="/music" rel="item" className="header__navbar--current">
+              Âm nhạc chữa lành
             </Link>
             <Link to="/booking" rel="item" className="header__navbar--current">
               Đặt vé & Giá vé

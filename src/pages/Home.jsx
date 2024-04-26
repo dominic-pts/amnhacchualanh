@@ -12,7 +12,6 @@ import Floating from "../components/Floating";
 export default function Home() {
   return (
     <Container>
-   
       <Header />
       <Carousel />
       <ConceptMusic />
