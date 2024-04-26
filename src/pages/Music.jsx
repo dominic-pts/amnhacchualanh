@@ -1,9 +1,5 @@
 import React, { useState, useRef } from "react";
 import styled from "styled-components";
-
-// styles
-import "../styles/app.scss";
-
 // data
 import data from "../util";
 
