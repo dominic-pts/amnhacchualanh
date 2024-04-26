@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { CProgress } from "@coreui/react";
@@ -149,13 +149,13 @@ export default function EmotionSurvey() {
     setCurrentQuestion(currentQuestion - 1);
   };
 
-  const calculateScore = () => {
+  const calculateScore = useCallback(() => {
     let score = 0;
     answers.forEach((answer) => {
       score += parseInt(answer);
     });
     return score * 1;
-  };
+  }, [answers]);
 
   useEffect(() => {
     if (answered.every((answer) => answer)) {

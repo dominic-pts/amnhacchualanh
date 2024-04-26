@@ -16,7 +16,7 @@ import Library from "../components/Library";
 export default function Music() {
   const audioRef = useRef(null);
 
-  const [songs, setSongs] = useState(data());
+  const [songs,] = useState(data());
   const [currentSong, setCurrentSong] = useState(songs[0]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLibOpen, setIsLibOpen] = useState(false);
