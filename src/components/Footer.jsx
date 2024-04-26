@@ -31,16 +31,16 @@ export default function Footer() {
             </Link>
             <div className="media">
               <Link>
-                <img src={iconfb} alt="" />
+                <img src={iconfb} alt="facebook" />
               </Link>
               <Link>
-                <img src={iconytb} alt="" />
+                <img src={iconytb} alt="youtube" />
               </Link>
               <Link>
-                <img src={iconinsta} alt="" />
+                <img src={iconinsta} alt="insta" />
               </Link>
               <Link>
-                <img src={icontwitter} alt="" />
+                <img src={icontwitter} alt="twitter" />
               </Link>
             </div>
           </div>

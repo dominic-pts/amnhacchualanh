@@ -60,7 +60,7 @@ export default function CafeLocation() {
         <div className="box_heal">
           {cafeLocation.map((item, index) => (
             <div className="card" key={index} onClick={() => openModal(item)}>
-              <img src={item.attributes.image.data[0]?.attributes.url} alt="" />
+              <img src={item.attributes.image.data[0]?.attributes.url} alt="cafeLocation" />
               <div className="card_content">
                 <h2>{item.attributes.title} </h2>
                 <p>{item.attributes.description}</p>
@@ -84,7 +84,7 @@ export default function CafeLocation() {
                 <img
                   className="close-btn"
                   src={iconCancel}
-                  alt=""
+                  alt="cancel"
                   onClick={closeModal}
                 />
               </div>
@@ -95,7 +95,7 @@ export default function CafeLocation() {
                       selectedLocationItem?.attributes.image.data[0]?.attributes
                         .url
                     }
-                    alt=""
+                    alt="time"
                   />
                   <span>
                     Thời gian: Mở {selectedLocationItem?.attributes.open} - Đóng

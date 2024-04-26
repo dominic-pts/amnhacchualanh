@@ -12,14 +12,15 @@ import Floating from "../components/Floating";
 export default function Home() {
   return (
     <Container>
+   
       <Header />
       <Carousel />
       <ConceptMusic />
       <Benefit />
       <HealMusic />
       <EmotionSurvey />
-      <RequestInfo/>
-      <Floating/>
+      <RequestInfo />
+      <Floating />
       <Footer />
     </Container>
   );

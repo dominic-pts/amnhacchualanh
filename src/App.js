@@ -5,6 +5,7 @@ import Booking from "../src/pages/Booking";
 import CafeLocation from "./pages/CafeLocation";
 import TermsPolicies from "./pages/TermsPolicies";
 
+
 function App() {
   return (
     <BrowserRouter >
@@ -14,6 +15,7 @@ function App() {
         <Route exact path="/terms-policies" element={<TermsPolicies />} />
         <Route exact path="/cafe-location" element={<CafeLocation />} />
         <Route path="*" element={<Error />} />
+        
       </Routes>
     </BrowserRouter>
 

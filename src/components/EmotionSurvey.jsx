@@ -1,13 +1,121 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import MoodTestAPI from "../services/moodTest/moodTestAPI";
+import { Link } from "react-router-dom";
+
+const questions = [
+  {
+    id: 1,
+    question: 'Tôi thấy khó mà thoải mái được',
+    options: ['0', '1', '2', '3'],
+  },
+  {
+    id: 2,
+    question: 'Tôi bị khô miệng',
+    options: ['0', '1', '2', '3'],
+  },
+  {
+    id: 3,
+    question: 'Tôi không thấy có chút cảm xúc tích cực nào',
+    options: ['0', '1', '2', '3'],
+  },
+  {
+    id: 4,
+    question: 'Tôi bị rối loạn nhịp thở (thở gấp, khó thở dù chẳng làm việc gì nặng)',
+    options: ['0', '1', '2', '3'],
+  },
+  {
+    id: 5,
+    question: 'Tôi thấy khó bắt tay vào công việc',
+    options: ['0', '1', '2', '3'],
+  },
+  {
+    id: 6,
+    question: 'Tôi đã phản ứng thái quá khi có những sự việc xảy ra',
+    options: ['0', '1', '2', '3'],
+  },
+  {
+    id: 7,
+    question: 'Tôi bị ra mồ hôi (chẳng hạn như mồ hôi tay...)',
+    options: ['0', '1', '2', '3'],
+  },
+  {
+    id: 8,
+    question: 'Tôi thấy mình đang suy nghĩ quá nhiều',
+    options: ['0', '1', '2', '3'],
+  },
+  {
+    id: 9,
+    question: 'Tôi lo lắng về những tình huống có thể khiến tôi hoảng sợ hoặc biến tôi thành trò cười',
+    options: ['0', '1', '2', '3'],
+  },
+  {
+    id: 10,
+    question: 'Tôi thấy mình chẳng có gì để mong đợi cả',
+    options: ['0', '1', '2', '3'],
+  },
+  {
+    id: 11,
+    question: 'Tôi thấy bản thân dễ bị kích động',
+    options: ['0', '1', '2', '3'],
+  },
+  {
+    id: 12,
+    question: 'Tôi thấy khó thư giãn được',
+    options: ['0', '1', '2', '3'],
+  },
+  {
+    id: 13,
+    question: 'Tôi cảm thấy chán nản, thất vọng',
+    options: ['0', '1', '2', '3'],
+  },
+  {
+    id: 14,
+    question: 'Tôi không chấp nhận được việc có cái gì đó xen vào cản trở việc tôi đang làm',
+    options: ['0', '1', '2', '3'],
+  },
+  {
+    id: 15,
+    question: 'Tôi thấy mình gần như hoảng loạn',
+    options: ['0', '1', '2', '3'],
+  },
+  {
+    id: 16,
+    question: 'Tôi không thấy hăng hái với bất kỳ việc gì nữa',
+    options: ['0', '1', '2', '3'],
+  },
+  {
+    id: 17,
+    question: 'Tôi cảm thấy mình chẳng đáng làm người',
+    options: ['0', '1', '2', '3'],
+  },
+  {
+    id: 18,
+    question: 'Tôi thấy mình khá dễ phật ý, tự ái',
+    options: ['0', '1', '2', '3'],
+  },
+  {
+    id: 19,
+    question: 'Tôi nghe thấy rõ tiếng nhịp tim dù chẳng làm việc gì cả (ví dụ, tiếng nhịp tim tăng, tiếng tim loạn nhịp)',
+    options: ['0', '1', '2', '3'],
+  },
+  {
+    id: 20,
+    question: 'Tôi hay sợ vô cớ',
+    options: ['0', '1', '2', '3'],
+  },
+  {
+    id: 21,
+    question: 'Tôi thấy cuộc sống vô nghĩa',
+    options: ['0', '1', '2', '3'],
+  },
+];
 
 export default function EmotionSurvey() {
- 
-
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [emotionalState, setEmotionalState] = useState("");
   const [question, setQuestions] = useState([]);
+
 
   useEffect(() => {
     const fetchQuestions = async () => {
@@ -36,7 +144,7 @@ export default function EmotionSurvey() {
   };
   const calculateEmotionalState = () => {
     const totalScore = Object.values(selectedAnswers).reduce((acc, answer) => {
-      const answerScore = { a: 2, b: 1, c: 0 };
+      const answerScore = { a: 0, b: 1, c: 2, d: 3 };
       return acc + answerScore[answer];
     }, 0);
     console.log(totalScore);
@@ -72,11 +180,58 @@ export default function EmotionSurvey() {
     <Container className="containers">
       <h1> 😉😍😊Bài kiểm tra cảm xúc😣🥲😡</h1>
       <p>
-        Đừng lo lắng về mất phương hướng trong cuộc sống. Hãy tham gia vào bài
-        kiểm tra cảm xúc của chúng tôi để hiểu rõ hơn về bản thân và nhận được
-        các biện pháp chữa lành phù hợp nhất. Bắt đầu hành trình của bạn để tìm
-        ra lối thoát và tạo ra một cuộc sống hạnh phúc hơn ngay bây giờ!
+        DASS 21 là thang đo (gồm 21 câu hỏi) giúp đánh giá mức độ rối loạn lo âu
+        – trầm cảm - stress khá phổ biến hiện nay trong cộng đồng. <br/> Bài kiểm tra này
+        thường được sử dụng để đánh giá tình trạng tâm lý của những người gặp
+        khó khăn trong cuộc sống,<br/> như mất việc làm, thất tình, chấn thương, hoặc đối mặt
+        với các tình huống khó khăn.
       </p>
+      <h4>Bài kiểm tra nhằm mục đích: </h4>
+      <ul>
+        <li>Tự đánh giá tình trạng Sức khoẻ tinh thần cá nhân.</li>
+        <li>
+          Dự đoán về Sức khoẻ tinh thần để giúp bạn tìm kiếm những bài nhạc chữa
+          lành.
+        </li>
+        <li>
+          Tổng hợp thông tin để thuận tiện cho việc nghiên cứu và đưa ra giải
+          pháp.
+        </li>
+      </ul>
+      <h4>Nguyên tắc thực hiện bài kiểm tra: </h4>
+      <ul>
+        <li>
+          Hãy đọc mỗi câu hỏi sau và chọn đáp án gần giống nhất với tình trạng
+          mà bạn cảm thấy trong suốt một tuần qua. <br /> Không có câu trả lời
+          đúng hay sai.<br/> Và đừng dừng lại quá lâu ở bất kỳ câu nào.
+        </li>
+      </ul>
+      <h4>Lưu ý: </h4>
+      <ul>
+        <li>
+          Kết quả bài test này chỉ mang tính chất tham khảo.<br/> Không có giá trị
+          thay thế chẩn đoán y khoa bởi bác sĩ/chuyên gia có chuyên môn.
+        </li>
+      </ul>
+      <h4>Nguồn tham khảo: </h4>
+      <ul>
+        <li>
+          <Link target="_blank" to="https://psy-edu.net/2021/06/23/thang-danh-gia-tram-cam-lo-au-stress-dass-21/#:~:text=DASS%2D21%20(Depression%20Anxiety%20and,New%20South%20Wales)%2C%20Australia.">
+            Thang đánh giá Trầm cảm – Lo âu – Stress (DASS-21)
+          </Link>
+        </li>
+        <li>
+          <Link target="_blank" to="https://bookingcare.vn/cam-nang/bai-test-danh-gia-lo-au--tram-cam--stress-dass-21-p177.html">
+            Một số nguyên tắc khi làm bài kiểm tra.
+          </Link>
+        </li>
+        <li>
+          <Link target="_blank" to="https://bookingcare.vn/bai-test">
+            Một số bài kiểm tra khác.
+          </Link>
+        </li>
+      </ul>
+
       <form>
         {question.map((question) => (
           <div key={question.id}>
@@ -122,15 +277,27 @@ export default function EmotionSurvey() {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
   h1 {
     margin-bottom: 50px;
+    text-align: center;
   }
   p {
-    font-size: var(--font-size-small);
     text-align: center;
+    font-size: var(--font-size-small);
     padding: 0 50px 50px;
+  }
+  a {
+    margin-bottom: 100px;
+    font-size: var(--font-size-small);
+  }
+  ul {
+    margin-bottom: 50px;
+    li {
+      list-style: none;
+      line-height: 2;
+      font-size: var(--font-size-small);
+    }
   }
   form {
     display: grid;
@@ -184,16 +351,16 @@ const Container = styled.div`
   }
 
   //reponsive
-  @media (max-width: 430px){
-    h1{
-      font-size:21px;
+  @media (max-width: 430px) {
+    h1 {
+      font-size: 21px;
     }
-    p{
+    p {
       padding: 0 10px 10px;
     }
-    form{
+    form {
       grid-template-columns: 1fr;
-      div{
+      div {
         padding: 10px;
       }
     }

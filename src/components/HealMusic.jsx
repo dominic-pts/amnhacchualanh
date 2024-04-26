@@ -47,7 +47,7 @@ export default function HealMusic() {
           <div className="card" key={index} onClick={() => openModal(item)}>
             <img
               src={item.attributes.img_heal.data[0]?.attributes.url}
-              alt=""
+              alt="heal"
             />
             <div className="card_content">
               <h2>{item.attributes.title} </h2>
@@ -64,7 +64,7 @@ export default function HealMusic() {
               <img
                 className="close-btn"
                 src={iconCancel}
-                alt=""
+                alt="cancel"
                 onClick={closeModal}
               />
             </div>
@@ -73,7 +73,7 @@ export default function HealMusic() {
                 src={
                   selectedHealItem?.attributes.img_heal.data[0]?.attributes.url
                 }
-                alt=""
+                alt="heal"
               />
               <div className="modal__body__content">
                 <h4>{selectedHealItem?.attributes.title}</h4>
