@@ -57,6 +57,9 @@ const Header = () => {
           <Link to="/cafe-location" rel="item" className="modal__item">
             Địa điểm cafe chữa lành
           </Link>
+          <Link to="/music" rel="item" className="modal__item">
+              Âm nhạc chữa lành
+            </Link>
           <Link to="/booking" rel="item" className="modal__item booking__item">
             Đặt vé & Giá vé
           </Link>
