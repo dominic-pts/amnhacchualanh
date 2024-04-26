@@ -16,7 +16,6 @@ function App() {
         <Route exact path="/cafe-location" element={<CafeLocation />} />
         <Route exact path="/music" element={<Music />} />
         <Route path="*" element={<Error />} />
-        
       </Routes>
     </BrowserRouter>
 

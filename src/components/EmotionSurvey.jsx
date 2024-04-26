@@ -256,7 +256,7 @@ export default function EmotionSurvey() {
         );
       }
     }
-  }, [answered]);
+  }, [answered, calculateScore]);
 
   return (
     <Container className="containers">
