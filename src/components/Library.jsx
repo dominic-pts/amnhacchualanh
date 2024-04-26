@@ -1,3 +1,55 @@
+import React from 'react';
+import LibrarySong from './LibrarySong';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import styled from 'styled-components';
+
+const Library = ({
+  songs,
+  currentSong,
+  setCurrentSong,
+  setIsPlaying,
+  isLibOpen,
+  setIsLibOpen,
+}) => {
+  const renderSongItems = () => {
+    return songs.map((song) => (
+      <LibrarySong
+        key={song.id}
+        song={song}
+        currentSong={currentSong}
+        setCurrentSong={setCurrentSong}
+        setIsPlaying={setIsPlaying}
+      />
+    ));
+  };
+
+  return (
+    <Container>
+      <div className={`library ${isLibOpen ? 'active-library' : ''}`}>
+        <div className="heading-container">
+          <h2>Thư viện</h2>
+          <button onClick={() => setIsLibOpen(false)}>
+            <FontAwesomeIcon icon={faTimes} size="2x" />
+          </button>
+        </div>
+        <div className="library-songs">{renderSongItems()}</div>
+      </div>
+    </Container>
+  );
+};
+
+export default Library;
+
+const Container = styled.div`
+:root{
+  $primary-color           : #03a9f4;
+  $primary-light-color     : #67daff;
+  $primary-dark-color      : #007ac1;
+  $primary-text-color      : #455a64;
+  $secondary-text-color    : #718792;
+}
+
 .library {
   position: fixed;
   top: 0;
@@ -71,7 +123,7 @@
 }
 
 .active {
-  background: $primary-color;
+  background: #03a9f4;
   h3,
   h4 {
     color: white;
@@ -129,3 +181,5 @@
     }
   }
 }
+
+`;

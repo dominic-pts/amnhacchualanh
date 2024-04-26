@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import iconCancel from "../assets/icon/cancel.svg";
 import CafeLocationAPI from "../services/cafeLocation/cafeLocationAPI";
 import Floating from "../components/Floating";
+import ScrollToTop from "../components/scrollToTop";
 
 export default function CafeLocation() {
   const modalRef = useRef();
@@ -46,6 +47,7 @@ export default function CafeLocation() {
     <>
       <Container className="containers">
         <Header />
+        <ScrollToTop/>
         <Floating/>
         <h1>Các địa điểm âm nhạc Cafe Chữa Lành tại Đà Lạt</h1>
         <p className="des">

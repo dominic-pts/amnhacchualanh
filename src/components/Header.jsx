@@ -35,13 +35,13 @@ const Header = () => {
               rel="item"
               className="header__navbar--current"
             >
-              Địa điểm âm nhac cafe chữa lành
+              Địa điểm cafe chữa lành
             </Link>
             <Link to="/music" rel="item" className="header__navbar--current">
               Âm nhạc chữa lành
             </Link>
             <Link to="/booking" rel="item" className="header__navbar--current">
-              Đặt vé & Giá vé
+              Đặt vé tham dự chữa lành
             </Link>
           </nav>
           <nav className="header__menu">

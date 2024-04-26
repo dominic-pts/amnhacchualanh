@@ -7,6 +7,7 @@ import {
   faAngleRight,
 } from '@fortawesome/free-solid-svg-icons';
 import { playAudio } from '../utilities/playAudio';
+import styled from 'styled-components';
 
 const Player = ({
   isPlaying,
@@ -57,6 +58,7 @@ const Player = ({
   };
 
   return (
+    <Container>
     <div className="player">
       <div className="time-control">
         <p>{getNormalTime(songState.currentTime)}</p>
@@ -104,7 +106,116 @@ const Player = ({
         </button>
       </div>
     </div>
+    </Container>
   );
 };
 
 export default Player;
+
+const Container = styled.div`
+:root{
+  $primary-color           : #03a9f4;
+  $primary-light-color     : #67daff;
+  $primary-dark-color      : #007ac1;
+  $primary-text-color      : #455a64;
+  $secondary-text-color    : #718792;
+}
+.player {
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  button {
+    border: 0px;
+    background: transparent;
+
+    &:disabled {
+      color: grey;
+    }
+  }
+}
+
+.time-control {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  input {
+    width: 100%;
+    background: transparent;
+    cursor: pointer;
+    -webkit-appearance: none;
+  }
+
+  p {
+    padding: 1rem;
+  }
+}
+
+.play-control {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  svg {
+    cursor: pointer;
+    color: $primary-text-color;
+
+    &:hover {
+      color: $primary-light-color;
+    }
+  }
+}
+
+// seekbar customization
+input[type='range']:focus {
+  outline: none;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+}
+
+input[type='range']::-moz-range-thumb {
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
+}
+
+.track {
+  background: lightblue;
+  width: 100%;
+  height: 1rem;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.animate-track {
+  background: rgb(204, 204, 204);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(0%);
+  pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+  .time-control {
+    width: 90%;
+  }
+
+  .play-control {
+    width: 60%;
+  }
+}
+
+`;

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Floating from "../components/Floating";
+import ScrollToTop from "../components/scrollToTop";
 import { CAccordion } from "@coreui/react";
 import { CAccordionBody } from "@coreui/react";
 import { CAccordionHeader } from "@coreui/react";
@@ -17,6 +18,7 @@ export default function TermsPolicies() {
   return (
     <Container>
       <Header />
+      <ScrollToTop/>
       <Floating />
       <div className="containers ruler">
         <h1>ĐIỀU KHOẢN VÀ CHÍNH SÁCH</h1>

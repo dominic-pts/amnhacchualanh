@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import FormRequestAPI from "../services/formRequest/formRequestAPI";
 import Header from "../components/Header";
 import Floating from "../components/Floating";
+import ScrollToTop from "../components/scrollToTop";
 
 export default function Booking() {
   const price = 4500;
@@ -56,11 +57,7 @@ export default function Booking() {
       document.getElementById(
         "description"
       ).value = `Ghế: ${selectedSeatsText.join(", ")}`;
-    } else {
-      console.error(
-        "Form requests data is empty or undefined, or soldSeats is not provided."
-      );
-    }
+    } 
   };
 
   const isSeatSold = (rowIndex, seatIndex) => {
@@ -99,11 +96,6 @@ export default function Booking() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // const captchaResponse = window.grecaptcha.getResponse();
-    // if (!captchaResponse.length > 0) {
-    //   alert("Please complete the reCAPTCHA");
-    //   return;
-    // }
     const checkbox = document.getElementById("checkbox");
     if (!checkbox.checked) {
       alert("Vui lòng đọc điều khoản và chính sách trước khi gửi");
@@ -148,7 +140,6 @@ export default function Booking() {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log("Success:", data);
         window.location.reload();
       })
       .catch((error) => {
@@ -168,12 +159,6 @@ export default function Booking() {
   };
 
   useEffect(() => {
-    // Thêm script Google reCAPTCHA
-    // const script = document.createElement("script");
-    // script.src = "https://www.google.com/recaptcha/api.js";
-    // script.async = true;
-    // document.body.appendChild(script);
-
     // Xử lý successMessage
     if (successMessage) {
       const timer = setTimeout(() => {
@@ -190,7 +175,6 @@ export default function Booking() {
       try {
         const api = new FormRequestAPI();
         const response = await api.getFormRepuest();
-        console.log(response);
         setFormRequests(response.data);
       } catch (error) {
         console.error("Error fetching form requests:", error);
@@ -204,9 +188,6 @@ export default function Booking() {
     // Xử lý danh sách ghế đã bán
     if (formRequests && formRequests.length > 0) {
       const seatsList = formRequests.flatMap((formRequest) => {
-        console.log(
-          formRequest.attributes.seats.split(",").map((seat) => seat.trim())
-        );
         if (formRequest?.attributes?.seats) {
           return formRequest.attributes.seats
             .split(",")
@@ -240,6 +221,7 @@ export default function Booking() {
   return (
     <Container className="backlove">
       <Header />
+      <ScrollToTop/>
       <Floating/>
       <div className="booking-container">
         <ul className="showcase">
@@ -365,7 +347,7 @@ export default function Booking() {
                 ></input>
               </div>
               <div className="form-control-wrap rules">
-                <Link>Điều khoản và chính sách của chúng tôi</Link>
+                <Link to="/terms-policies?type=dat-cho-thanh-toan">Điều khoản và chính sách của chúng tôi</Link>
               </div>
               <div className="form-control-wrap Agree">
                 <label htmlFor="checkbox">
@@ -382,10 +364,6 @@ export default function Booking() {
               </div>
             </div>
             <div className="form-col">
-              {/* <div
-                className="g-recaptcha"
-                data-sitekey="6LfzqJ0pAAAAABMMMHMV_ydwe--O926U3SSGQsLk"
-              ></div> */}
               <textarea
                 id="note"
                 type="description"
@@ -413,18 +391,17 @@ export default function Booking() {
 const Container = styled.div`
   --color-primary: #186ab4;
   color: #ffffff;
-  .hamburger-react {
-    color: #494949 !important;
+  .header div a {
+    color: var(--text-title-color);
   }
   .booking-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     width: 100%;
     font-family: "Lato", sans-serif;
-    margin: 0;
+    margin: 100px 0 0 0;
   }
   .movie-container select {
     background-color: #ffffff;

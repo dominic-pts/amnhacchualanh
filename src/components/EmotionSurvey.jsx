@@ -143,7 +143,6 @@ export default function EmotionSurvey() {
       return;
     }
     setCurrentQuestion(currentQuestion + 1);
-    console.log(currentQuestion + 1);
   };
   const handlePreviousQuestion = () => {
     setCurrentQuestion(currentQuestion - 1);
@@ -160,8 +159,6 @@ export default function EmotionSurvey() {
   useEffect(() => {
     if (answered.every((answer) => answer)) {
       const totalScore = calculateScore();
-
-      console.log(totalScore);
 
       if (totalScore >= 51) {
         setEmotionalState(
@@ -480,7 +477,7 @@ const Container = styled.div`
   label {
     cursor: pointer;
     padding: 20px;
-    width: 90%;
+    width: 85%;
   }
   .btn__custome {
     margin: 50px auto;

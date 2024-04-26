@@ -1,5 +1,4 @@
 import React from 'react';
-
 const LibrarySong = ({ song, currentSong, setCurrentSong }) => {
   // handlers
   const handleSelectSong = () => {

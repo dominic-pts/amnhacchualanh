@@ -1,5 +1,3 @@
-
-
 /*=============== VARIABLES CSS ===============*/
 :root {
   /*========== Colors ==========*/
@@ -32,7 +30,7 @@
 
 
 body {
-  
+
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -114,7 +112,7 @@ body {
 
   @media (max-width: 1024px) {
     .containers {
-      max-width: 90vw;
+      max-width: 80vw;
     }
 
     .booking-container {
@@ -134,16 +132,14 @@ body {
 
   @media (min-width: 1024px) and (max-width: 1300px) {
     .containers {
-      max-width: 85vw;
+      max-width: 90vw;
 
     }
-
-
   }
 
   @media (min-width: 1301px) {
     .containers {
-      max-width: 95vw;
+      max-width: 89vw;
     }
   }
 
@@ -157,4 +153,21 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+* {
+  margin    : 0;
+  padding   : 0;
+  box-sizing: border-box;
+}
+
+
+
+.App {
+  transition: all 0.5s ease;
+}
+
+.library-active {
+  margin-left: 20rem;
 }

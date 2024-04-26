@@ -52,18 +52,19 @@ const Container = styled.div`
   }
   h3 {
     font-size: var(--font-size-big);
-    /* display: -webkit-box;
-    -webkit-line-clamp: 1;
+    color: #fff;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    overflow: hidden; */
+    overflow: hidden;
   }
   p {
     font-size: var(--font-size-medium);
     margin-bottom: 50px;
-    /* display: -webkit-box;
-    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    overflow: hidden; */
+    overflow: hidden;
   }
   //reponsive
   @media (max-width: 430px){

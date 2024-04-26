@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-// import RequestInfoAPI from "../services/requestInfo/requestInfoAPI";
 const RequestInfo = () => {
   const [successMessage, setSuccessMessage] = useState("");
   const [errors, setErrors] = useState({});
@@ -12,12 +11,7 @@ const RequestInfo = () => {
     description: "",
   });
 
-  // Import re-captcha html
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://www.google.com/recaptcha/api.js";
-    script.async = true;
-    document.body.appendChild(script);
 
     // Xử lý successMessage
     if (successMessage) {
@@ -46,12 +40,6 @@ const RequestInfo = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // const captchaResponse = window.grecaptcha.getResponse();
-    // if (!captchaResponse.length > 0) {
-    //   alert("Please complete the reCAPTCHA");
-    //   return;
-    // }
-
     const validationErrors = {};
     for (const key in formData) {
       if (!formData[key]) {
@@ -85,9 +73,6 @@ const RequestInfo = () => {
       body: JSON.stringify({ data: formData }),
     })
       .then((response) => response.json())
-      .then((data) => {
-        console.log("Success:", data);
-      })
       .catch((error) => {
         console.error("Error:", error);
       });
