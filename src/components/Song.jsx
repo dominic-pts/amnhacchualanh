@@ -1,7 +1,22 @@
-import React from 'react';
+import React  from 'react';
 import styled from 'styled-components';
+// import HeadMusicAPI from "../services/headMusic/headMusicAPI";
 
 const Song = ({ currentSong }) => {
+  // const [headMusic, setHeadMusic] = useState([]);
+  // useEffect(() => {
+  //   const fetchHeadMusicAPI = async () => {
+  //     try {
+  //       const api = new HeadMusicAPI();
+  //       const response = await api.getHeadMusicAudio();
+  //       setHeadMusic(response.data);
+  //       console.log(response.data)
+  //     } catch (error) {
+  //       console.error("Error fetching slider header:", error);
+  //     }
+  //   };
+  //   fetchHeadMusicAPI();
+  // }, []);
   return (
     <Container>
       <div className="song-container">
