@@ -1,4 +1,5 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
+
 import styled from "styled-components";
 // data
 import data from "../util";
@@ -8,11 +9,26 @@ import Nav from "../components/Nav";
 import Song from "../components/Song";
 import Player from "../components/Player";
 import Library from "../components/Library";
+import HeadMusicAPI from "../services/headMusic/headMusicAPI";
 
 export default function Music() {
   const audioRef = useRef(null);
+  // const [headMusic, setHeadMusic] = useState([]);
+  const [songs,setSongs] = useState(data());
+  useEffect(() => {
+    const fetchHeadMusicAPI = async () => {
+      try {
+        const api = new HeadMusicAPI();
+        const response = await api.getHeadMusicAudio();
+        setSongs(response);
+        console.log(response);
+      } catch (error) {
+        console.error("Error fetching slider header:", error);
+      }
+    };
+    fetchHeadMusicAPI();
+  }, []);
 
-  const [songs,] = useState(data());
   const [currentSong, setCurrentSong] = useState(songs[0]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLibOpen, setIsLibOpen] = useState(false);
@@ -26,6 +42,8 @@ export default function Music() {
     next: true,
     previous: false,
   });
+
+ 
 
   // helpers
   const handleSongTimer = (event) => {

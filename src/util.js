@@ -1,8 +1,27 @@
 import { v4 as uuidv4 } from 'uuid';
-function chillHop() {
+// import { useEffect, useState } from "react";
+// import HeadMusicAPI
+//  from './services/headMusic/headMusicAPI';
+function ChillHop() {
+  // const [headMusic, setHeadMusic] = useState([]);
+
+  // useEffect(() => {
+  //   const fetchHeadMusicAPI = async () => {
+  //     try {
+  //       const api = new HeadMusicAPI();
+  //       const response = await api.getHeadMusicAudio();
+  //       setHeadMusic(response);
+  //       console.log(response);
+  //     } catch (error) {
+  //       console.error("Error fetching slider header:", error);
+  //     }
+  //   };
+  //   fetchHeadMusicAPI();
+  // }, []);
+  
   return [
     {
-      name: 'Beaver Creek',
+      name:'Beaver Creeks',
       cover:
         'https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg',
       artist: 'Aso, Middle School, Aviino',
@@ -65,4 +84,4 @@ function chillHop() {
   ];
 }
 
-export default chillHop;
+export default ChillHop;

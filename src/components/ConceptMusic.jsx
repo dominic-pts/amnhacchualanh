@@ -35,8 +35,6 @@ export default function ConceptMusic() {
           )}
         </div>
       </div>
-
-     
     </Container>
   );
 }
@@ -68,12 +66,13 @@ const Container = styled.div`
     }
   }
 
- //reponsive
+  //reponsive
 
   @media (max-width: 1024px) {
-    .content{
-        grid-template-columns: 1fr ;
-        gap: 30px;
-      }
+    .content {
+      grid-template-columns: 1fr;
+      gap: 30px;
+      padding: 50px 0 0;
+    }
   }
 `;

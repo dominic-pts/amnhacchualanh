@@ -353,18 +353,18 @@ export default function EmotionSurvey() {
         </form>
         <div className="btn__custome">
           <button
-            className="btn__primary"
-            onClick={handlePreviousQuestion}
-            disabled={currentQuestion === 0}
-          >
-            Quay lại
-          </button>
-          <button
             className="btn__primary "
             onClick={handleNextQuestion}
             disabled={currentQuestion === questions.length - 1}
           >
             Câu tiếp theo
+          </button>
+          <button
+            className="btn__primary"
+            onClick={handlePreviousQuestion}
+            disabled={currentQuestion === 0}
+          >
+            Quay lại
           </button>
           <button className="btn__primary" onClick={handleResetSurvey}>
             Làm lại
@@ -468,6 +468,7 @@ const Container = styled.div`
   .question__h4 {
     margin: 50px;
     text-align: center;
+    height: 50px;
   }
   input[type="radio"] {
     margin-left: 20px;

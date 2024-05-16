@@ -126,7 +126,6 @@ const Container = styled.div`
         padding: 15px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         height: 210px;
         h2{
           font-size: var(--font-size-normal);
@@ -144,7 +143,7 @@ const Container = styled.div`
           overflow: hidden;
           text-overflow: ellipsis; /* Để hiển thị dấu ... khi nội dung quá dài */
           display: -webkit-box;
-          -webkit-line-clamp: 1; /* Hiển thị chỉ 2 dòng */
+          -webkit-line-clamp: 2; /* Hiển thị chỉ 2 dòng */
           -webkit-box-orient: vertical;
         }
         span {
