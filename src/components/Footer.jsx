@@ -53,7 +53,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/terms-policies?type=kieu-nai">Chính sách sử lý kiếu nại</Link>
+                <Link to="/terms-policies?type=kieu-nai">Chính sách xử lý kiếu nại</Link>
               </li>
               <li>
                 <Link to="/terms-policies?type=huy">Chính sách hủy</Link>

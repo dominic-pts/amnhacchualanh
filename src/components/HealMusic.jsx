@@ -41,7 +41,7 @@ export default function HealMusic() {
   }, []);
   return (
     <Container className="containers">
-      <h1>Các bài báo về âm nhạc chữa lành</h1>
+      <h1>Các tin tức về âm nhạc chữa lành</h1>
       <div className="box_heal">
         {heal.map((item, index) => (
           <div className="card" key={index} onClick={() => openModal(item)}>
