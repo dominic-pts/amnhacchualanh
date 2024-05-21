@@ -5,7 +5,7 @@ import FormRequestAPI from "../services/formRequest/formRequestAPI";
 import Header from "../components/Header";
 import Floating from "../components/Floating";
 import ScrollToTop from "../components/scrollToTop";
-
+import Footer from "../components/Footer";
 export default function Booking() {
   const price = 4500;
   const number_row = 5;
@@ -131,7 +131,7 @@ export default function Booking() {
       return;
     }
 
-    fetch("https://strapirender-production.up.railway.app/api/form-requests", {
+    fetch("https://strapi-admin.up.railway.app/api/form-requests", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -384,6 +384,7 @@ export default function Booking() {
           </div>
         </form>
       </div>
+      <Footer/>
     </Container>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
-import imgLogo from "../assets/img/Logo.png";
+import imgLogo from "../../assets/img/Logo.png";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 

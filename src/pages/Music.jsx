@@ -1,14 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
-
 import styled from "styled-components";
 // data
-import data from "../util";
-
+import data from "../utilities/util";
 // components
-import Nav from "../components/Nav";
-import Song from "../components/Song";
-import Player from "../components/Player";
-import Library from "../components/Library";
+import Nav from "../components/Music/Nav";
+import Song from "../components/Music/Song";
+import Player from "../components/Music/Player";
+import Library from "../components/Music/Library";
 import HeadMusicAPI from "../services/headMusic/headMusicAPI";
 
 export default function Music() {

@@ -6,7 +6,7 @@ import {
   faAngleLeft,
   faAngleRight,
 } from '@fortawesome/free-solid-svg-icons';
-import { playAudio } from '../utilities/playAudio';
+import { playAudio } from '../../utilities/playAudio';
 import styled from 'styled-components';
 
 const Player = ({

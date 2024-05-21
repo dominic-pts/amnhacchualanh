@@ -65,7 +65,7 @@ const RequestInfo = () => {
       return;
     }
 
-    fetch("https://strapirender-production.up.railway.app/api/form-request-infos", {
+    fetch("https://strapi-admin.up.railway.app/api/form-request-infos", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
