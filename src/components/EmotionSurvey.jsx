@@ -163,8 +163,8 @@ export default function EmotionSurvey() {
       if (totalScore >= 51) {
         setEmotionalState(
           <div className="healdd">
-            Rất nặng: Bạn đang trải qua mức độ cao nhất của lo âu, trầm cảm và
-            stress. <br />
+            Bạn đang mở mức độ Rất nặng: Bạn đang trải qua mức độ cao nhất của
+            lo âu, trầm cảm và stress. <br />
             Điều này có thể ảnh hưởng đến chất lượng cuộc sống và khả năng hoạt
             động hàng ngày. <br />
             Việc tìm kiếm sự giúp đỡ chuyên môn là quan trọng. <br />
@@ -190,8 +190,9 @@ export default function EmotionSurvey() {
       } else if (totalScore >= 41 && totalScore < 50) {
         setEmotionalState(
           <div className="healdd">
-            Nặng: Mức độ lo âu, trầm cảm và stress của bạn đang ở mức cao, có
-            thể làm ảnh hưởng đến sức khỏe và cảm xúc hàng ngày.
+            Bạn đang mở mức độ Nặng: Mức độ lo âu, trầm cảm và stress của bạn
+            đang ở mức cao, có thể làm ảnh hưởng đến sức khỏe và cảm xúc hàng
+            ngày.
             <br />
             Điều này có thể ảnh hưởng đến chất lượng cuộc sống và khả năng hoạt
             động hàng ngày. <br />
@@ -218,8 +219,8 @@ export default function EmotionSurvey() {
       } else if (totalScore >= 31 && totalScore < 40) {
         setEmotionalState(
           <div className="healdd">
-            Vừa: Bạn đang trải qua một mức độ ổn định của lo âu, trầm cảm và
-            stress.
+            Bạn đang mở mức độ Vừa: Bạn đang trải qua một mức độ ổn định của lo
+            âu, trầm cảm và stress.
             <br />
             Điều này có thể ảnh hưởng đến chất lượng cuộc sống và khả năng hoạt
             động hàng ngày. <br />
@@ -245,11 +246,11 @@ export default function EmotionSurvey() {
         );
       } else if (totalScore >= 15 && totalScore < 30) {
         setEmotionalState(
-          "Nhẹ: Mức độ lo âu, trầm cảm và stress của bạn ở mức độ nhẹ, đây có thể là dấu hiệu của sự căng thẳng trong cuộc sống hàng ngày. Cần thiết phải tự chăm sóc tâm trạng và tìm kiếm cách giảm stress."
+          "Bạn đang mở mức độ Nhẹ: Mức độ lo âu, trầm cảm và stress của bạn ở mức độ nhẹ, đây có thể là dấu hiệu của sự căng thẳng trong cuộc sống hàng ngày. Cần thiết phải tự chăm sóc tâm trạng và tìm kiếm cách giảm stress."
         );
       } else {
         setEmotionalState(
-          "Bình thường: Bạn đang ở mức độ bình thường về lo âu, trầm cảm và stress. Điều này cho thấy bạn đang ổn định và có khả năng đối mặt với những thách thức trong cuộc sống hàng ngày."
+          "Bạn đang mở mức độ Bình thường: Bạn đang ở mức độ bình thường về lo âu, trầm cảm và stress. Điều này cho thấy bạn đang ổn định và có khả năng đối mặt với những thách thức trong cuộc sống hàng ngày."
         );
       }
     }
@@ -312,7 +313,6 @@ export default function EmotionSurvey() {
             </Link>
           </li>
         </ul>
-       
       </div>
 
       <div className="question">
@@ -374,51 +374,51 @@ export default function EmotionSurvey() {
         {emotionalState && (
           <div className="result">
             <h2>Kết quả bài kiểm tra</h2>
+            <div className="table_head">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Mức độ</th>
+                    <th>Lo âu</th>
+                    <th>Trầm cảm</th>
+                    <th>Stress</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Bình thường</td>
+                    <td>0 - 7</td>
+                    <td>0 - 9</td>
+                    <td>0 - 14</td>
+                  </tr>
+                  <tr>
+                    <td>Nhẹ</td>
+                    <td>8 - 9</td>
+                    <td>10 - 13</td>
+                    <td>15 - 18</td>
+                  </tr>
+                  <tr>
+                    <td>Vừa</td>
+                    <td>10 - 14</td>
+                    <td>14 - 20</td>
+                    <td>19 - 25</td>
+                  </tr>
+                  <tr>
+                    <td>Nặng</td>
+                    <td>15 - 19</td>
+                    <td>21 - 27</td>
+                    <td>26 - 33</td>
+                  </tr>
+                  <tr>
+                    <td>Rất nặng</td>
+                    <td>≥20</td>
+                    <td>≥28</td>
+                    <td>≥34</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p>{emotionalState}</p>
-           <div className="table_head">
-           <table>
-             <thead>
-               <tr>
-                 <th>Mức độ</th>
-                 <th>Lo âu</th>
-                 <th>Trầm cảm</th>
-                 <th>Stress</th>
-               </tr>
-             </thead>
-             <tbody>
-               <tr>
-                 <td>Bình thường</td>
-                 <td>0 - 7</td>
-                 <td>0 - 9</td>
-                 <td>0 - 14</td>
-               </tr>
-               <tr>
-                 <td>Nhẹ</td>
-                 <td>8 - 9</td>
-                 <td>10 - 13</td>
-                 <td>15 - 18</td>
-               </tr>
-               <tr>
-                 <td>Vừa</td>
-                 <td>10 - 14</td>
-                 <td>14 - 20</td>
-                 <td>19 - 25</td>
-               </tr>
-               <tr>
-                 <td>Nặng</td>
-                 <td>15 - 19</td>
-                 <td>21 - 27</td>
-                 <td>26 - 33</td>
-               </tr>
-               <tr>
-                 <td>Rất nặng</td>
-                 <td>≥20</td>
-                 <td>≥28</td>
-                 <td>≥34</td>
-               </tr>
-             </tbody>
-           </table>
-         </div>
           </div>
         )}
       </div>
@@ -491,40 +491,41 @@ const Container = styled.div`
     }
   }
   .table_head {
-  margin: 20px auto;
-  font-family: Arial, sans-serif;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid #ddd;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    
-    th, td {
-      padding: 8px;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
-    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+      border-radius: 5px;
 
-    th {
-      background-color: #4CAF50;
-      color: white;
-    }
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
 
-    tbody tr:nth-child(even) {
-      background-color: #f2f2f2;
-    }
+      th {
+        background-color: #4caf50;
+        color: white;
+      }
 
-    tbody tr:hover {
-      background-color: #ddd;
-    }
+      tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
 
-    td:first-child {
-      font-weight: bold;
+      tbody tr:hover {
+        background-color: #ddd;
+      }
+
+      td:first-child {
+        font-weight: bold;
+      }
     }
   }
-}
 
   .result {
     margin: 20px 0;
