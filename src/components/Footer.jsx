@@ -53,19 +53,27 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/terms-policies?type=kieu-nai">Chính sách xử lý kiếu nại</Link>
+                <Link to="/terms-policies?type=kieu-nai">
+                  Chính sách xử lý kiếu nại
+                </Link>
               </li>
               <li>
                 <Link to="/terms-policies?type=huy">Chính sách hủy</Link>
               </li>
               <li>
-                <Link to="/terms-policies?type=bao-luu">Chính sách bảo lưu</Link>
+                <Link to="/terms-policies?type=bao-luu">
+                  Chính sách bảo lưu
+                </Link>
               </li>
               <li>
-                <Link to="/terms-policies?type=tam-ngung">Chính sách tạm ngừng biểu diễn</Link>
+                <Link to="/terms-policies?type=tam-ngung">
+                  Chính sách tạm ngừng biểu diễn
+                </Link>
               </li>
               <li>
-                <Link to="/terms-policies?type=bao-mat">Chính sách bảo mật</Link>
+                <Link to="/terms-policies?type=bao-mat">
+                  Chính sách bảo mật
+                </Link>
               </li>
             </ul>
           </div>
@@ -90,6 +98,7 @@ const Container = styled.div`
     padding: 50px 0;
     font-size: 18px;
     color: var(--primary-color);
+    gap: 25px;
     ul {
       padding: 0;
       li {
@@ -106,7 +115,7 @@ const Container = styled.div`
       justify-content: center;
       gap: 10px;
       img {
-        width: 360px;
+        width: 280px;
       }
       .media {
         display: flex;
@@ -134,7 +143,6 @@ const Container = styled.div`
         width: 223px;
       }
     }
-    
   }
   @media (max-width: 1024px) {
     .footer {
@@ -145,6 +153,5 @@ const Container = styled.div`
         width: 323px;
       }
     }
-    
   }
 `;

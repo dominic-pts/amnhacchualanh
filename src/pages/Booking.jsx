@@ -223,6 +223,7 @@ export default function Booking() {
       <Header />
       <ScrollToTop/>
       <Floating/>
+
       <div className="booking-container">
         <ul className="showcase">
           <li>
@@ -374,7 +375,7 @@ export default function Booking() {
                 className="form-control"
                 onChange={handleChange}
               />
-              <button type="submit" className="btn__primary btn btn__double">
+              <button type="submit" className="btn__primary btn btn__double" onClick={() => alert('Chức năng đang trong giai đoạn demo chưa cập nhật chi tiết quán sẽ tiếp tục phát triển trong tương lai')}>
                 Gửi
               </button>
               {successMessage && (
