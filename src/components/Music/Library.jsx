@@ -33,10 +33,10 @@ const Library = ({
             Trang chủ
           </Link>
           <Link to="/cafe-location" rel="item" className="link__item">
-            Địa điểm 
+            Địa điểm
           </Link>
           <Link to="/booking" rel="item" className="link__item booking__item">
-            Đặt vé 
+            Đặt vé
           </Link>
         </div>
         <div className="heading-container">
@@ -64,12 +64,12 @@ const Container = styled.div`
   .heading-nav {
     display: flex;
     flex-direction: column;
-    font-weight: 700;
+    font-weight: 500;
     .link__item {
       text-decoration: none;
       font-size: var(--font-size-small);
       color: #494949;
-      padding: 20px 10px;
+      padding: 10px 10px;
     }
   }
   .library {
@@ -201,6 +201,14 @@ const Container = styled.div`
         width: 20%;
         height: 20%;
       }
+    }
+    .heading-nav {
+      display: flex;
+      flex-direction: row;
+      font-weight: 500;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
   }
 `;

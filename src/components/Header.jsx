@@ -58,7 +58,7 @@ const Header = () => {
             Địa điểm 
           </Link>
           <Link to="/music" rel="item" className="modal__item">
-              Âm nhạc chữa lành
+              Âm nhạc
             </Link>
           <Link to="/booking" rel="item" className="modal__item booking__item">
             Đặt vé
