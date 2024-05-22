@@ -33,10 +33,10 @@ const Library = ({
             Trang chủ
           </Link>
           <Link to="/cafe-location" rel="item" className="link__item">
-            Địa điểm cafe chữa lành
+            Địa điểm 
           </Link>
           <Link to="/booking" rel="item" className="link__item booking__item">
-            Đặt vé & Giá vé
+            Đặt vé 
           </Link>
         </div>
         <div className="heading-container">
@@ -64,6 +64,7 @@ const Container = styled.div`
   .heading-nav {
     display: flex;
     flex-direction: column;
+    font-weight: 700;
     .link__item {
       text-decoration: none;
       font-size: var(--font-size-small);

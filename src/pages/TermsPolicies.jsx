@@ -50,7 +50,7 @@ export default function TermsPolicies() {
             </CAccordionBody>
           </CAccordionItem>
           <CAccordionItem itemKey={"kieu-nai"}>
-            <CAccordionHeader>Chính sách xử lý kiếu nại</CAccordionHeader>
+            <CAccordionHeader>Chính sách xử lý khiếu nại</CAccordionHeader>
             <CAccordionBody>
               <ul>
                 <li>

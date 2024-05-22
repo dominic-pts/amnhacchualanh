@@ -12,7 +12,6 @@ const RequestInfo = () => {
   });
 
   useEffect(() => {
-
     // Xử lý successMessage
     if (successMessage) {
       const timer = setTimeout(() => {
@@ -234,7 +233,6 @@ const Container = styled.div`
             &:focus {
               border: 1px solid var(--primary-color);
             }
-            
           }
         }
       }
@@ -250,20 +248,27 @@ const Container = styled.div`
     resize: none;
     font-size: 18px;
   }
-    //reponsive
-    @media (max-width: 430px){
-      h1{
-        font-size: 25px;
-      }
-      .request-info-input .form{
-        grid-template-columns: 1fr;
+  //reponsive
+  @media (max-width: 430px) {
+    h1 {
+      font-size: 25px;
+    }
+    .request-info-input .form {
+      grid-template-columns: 1fr;
+      gap: 15px;
+      .form-col {
         gap: 15px;
-        .form-col{
-          gap: 15px;
-          .btn__primary{
-            margin: 0 auto;
-          }
+        .btn__primary {
+          margin: 0 auto;
         }
       }
     }
+  }
+  @media (max-width: 1024px) {
+    .request-info-input .form {
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      
+    }
+  }
 `;

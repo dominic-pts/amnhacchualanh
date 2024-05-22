@@ -35,13 +35,13 @@ const Header = () => {
               rel="item"
               className="header__navbar--current"
             >
-              Địa điểm cafe chữa lành
+              Địa điểm 
             </Link>
             <Link to="/music" rel="item" className="header__navbar--current">
-              Âm nhạc chữa lành
+              Âm nhạc 
             </Link>
             <Link to="/booking" rel="item" className="header__navbar--current">
-              Đặt vé tham dự chữa lành
+              Đặt vé 
             </Link>
           </nav>
           <nav className="header__menu">
@@ -55,13 +55,13 @@ const Header = () => {
             Trang chủ
           </Link>
           <Link to="/cafe-location" rel="item" className="modal__item">
-            Địa điểm cafe chữa lành
+            Địa điểm 
           </Link>
           <Link to="/music" rel="item" className="modal__item">
               Âm nhạc chữa lành
             </Link>
           <Link to="/booking" rel="item" className="modal__item booking__item">
-            Đặt vé & Giá vé
+            Đặt vé
           </Link>
         </nav>
       )}

@@ -130,10 +130,19 @@ const Container = styled.div`
   //reponsive
   @media (max-width: 430px) {
     .footer {
-      flex-direction: column;
-      gap: 50px;
       .logoMedia img {
         width: 223px;
+      }
+    }
+    
+  }
+  @media (max-width: 1024px) {
+    .footer {
+      flex-direction: column;
+      gap: 50px;
+      text-align: center;
+      .logoMedia img {
+        width: 323px;
       }
     }
     
